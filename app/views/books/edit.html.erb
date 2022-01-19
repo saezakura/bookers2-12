@@ -8,7 +8,7 @@
    <% end %>
  </ul>
  <% end %>
-<%= form_with model:@book, url:update_book_path(@book.id),method: :patch, local:true do |f| %>
+<%= form_with model:@book, url:update_book_path(@book),method: :patch, local:true do |f| %>
 
 <p>
  <strong>Title</strong>
@@ -25,5 +25,6 @@
 
 <% end %>
 
-<a> <%=link_to "Show",book_path(@book.id) %></a>
-<a> <%=link_to "Back",book_path %></a>
+<%=link_to "Show",book_path(@book) %>
+|
+<%=link_to "Back",books_path %>
